@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Estilizando la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: .25rem; /* Ancho de la barra de desplazamiento */
+    height: .25rem; /* Altura para desplazamiento horizontal */
+}
+
+/* Estilizando el pulgar (la parte que se mueve) */
+::-webkit-scrollbar-thumb {
+    background-color: #257BE5; /* Color del pulgar */
+    border-radius: 12px; /* Bordes redondeados */
+}
+
+/* Estilizando la pista de desplazamiento */
+::-webkit-scrollbar-track {
+    background: #7CB0EF; /* Color de fondo de la pista */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.chip__category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    width: 27rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
