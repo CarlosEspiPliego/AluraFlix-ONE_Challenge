@@ -1,15 +1,56 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    // Aquí va el estado inicial
+    isSaving: false,
+    videos: [],
+    videosBanner: [],
+    selectedVideo: null,
+    error: null
 };
 
 export const videoGallerySlice = createSlice({
     name: 'videoGallery',
     initialState,
     reducers: {
-        // Aquí van los reducers
+        setVideos: (state, action) => {
+            state.videos = action.payload;
+        },
+        setVideosBanner: (state, action) => {
+            state.videosBanner = action.payload;
+        },
+        isSavingVideo: (state) => {
+            state.isSaving = !state.isSaving;
+            console.log("isSaving", state.isSaving)
+        },
+        setSelectedVideo: (state, action) => {
+            state.selectedVideo = action.payload;
+        },
+        addNewVideo: (state, action) => {
+            state.videos = [...state.videos, action.payload];
+        },
+        updateVideo: (state, action) => {
+            state.videos = state.videos.map((video) => {
+                if (video.id === action.payload.id) {
+                    return {
+                        ...video,
+                        ...action.payload
+                    }
+                }
+                return video;
+            })
+        },
+        deleteVideoById: (state, action) => {
+            state.videos = state.videos.filter(video => video.id !== action.payload);
+        }
     }
 });
 
-export const { actions, reducer } = videoGallerySlice.actions;
+export const {
+    setVideos,
+    setVideosBanner,
+    isSavingVideo,
+    setSelectedVideo,
+    addNewVideo,
+    updateVideo,
+    deleteVideoById
+} = videoGallerySlice.actions;

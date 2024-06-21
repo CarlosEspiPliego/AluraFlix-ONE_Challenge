@@ -4,7 +4,7 @@
       "id": "1",
       "title": "¿Sabes qué es NodeJS?",
       "category": "Fullstack",
-      "imageUrl": "https://i.ytimg.com/an_webp/o8x_n4Px1N0/mqdefault_6s.webp?du=3000&sqp=CJ23x7MG&rs=AOn4CLBZ9oC85J9un7I0M6Urmf4tp6x9rg",
+      "imageUrl": "https://img-c.udemycdn.com/course/480x270/3098048_70dd_3.jpg",
       "videoUrl": "https://youtu.be/o8x_n4Px1N0",
       "description": "¿Es un lenguaje de programación? ¿Es un ambiente de desarrollo? ¿Una herramienta? En este video nuestro instructor, Leonardo Castillo, nos explica qué es NodeJS y para qué sirve."
     },
@@ -13,7 +13,7 @@
       "title": "Fullstack Project: Building a MERN Stack Application",
       "category": "Fullstack",
       "description": "A step-by-step guide to building a fullstack application using MongoDB, Express.js, React.js, and Node.js.",
-      "imageUrl": "data:image/png;base64,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",
+      "imageUrl": "https://www.cursosdev.com/ezoimgfmt/img-c.udemycdn.com/course/480x270/2264768_a446_2.jpg?ezimgfmt=rs:384x216/rscb1/ngcb1/notWebP",
       "videoUrl": "",
       "banner": false
     },
@@ -21,35 +21,43 @@
       "id": "2",
       "title": "React Hooks: ¿qué son y cómo funcionan?",
       "category": "Frontend",
-      "imageUrl": "https://i.ytimg.com/an_webp/9xlea2yDFaY/mqdefault_6s.webp?du=3000&sqp=CPChx7MG&rs=AOn4CLD8gFmHyc2b88TQrOC27Ei6MuDAuw",
+      "imageUrl": "https://edteam-media.s3.amazonaws.com/courses/original/24cf4d03-6a43-4a73-b2b9-338a4a62e2d2.png",
       "videoUrl": "https://youtu.be/9xlea2yDFaY",
       "description": "En este Alura+ el instructor Daniel Riverol nos enseña los diferentes usos de uno de los hooks más utilizados en React"
     },
     {
       "id": "3",
       "title": "Camino hacia el éxito como desarrollador Java",
-      "category": "Frontend",
+      "category": "Backend",
       "description": "¡Descubre el camino hacia el éxito como desarrollador Java! 💻🚀 En esta entrevista, exploramos los secretos del mundo Java y respondemos a tus preguntas clave",
-      "imageUrl": "https://i.ytimg.com/an_webp/zOetOoeOrOg/mqdefault_6s.webp?du=3000&sqp=COimx7MG&rs=AOn4CLA-ldwR6RhFWcKlRMpbWgpkvTqh1A",
+      "imageUrl": "https://blog.facialix.com/wp-content/uploads/2021/03/java-curso-1.jpg",
       "videoUrl": "https://youtu.be/zOetOoeOrOg",
       "videoIframeUrl": "https://www.youtube.com/embed/zOetOoeOrOg",
       "banner": true
     },
     {
-      "id": "4",
+      "id": "4asdfff",
       "title": "Node.js for Beginners",
       "category": "Backend",
       "description": "Start your journey into backend development with Node.js.",
-      "imageUrl": "",
+      "imageUrl": "https://edteam-media.s3.amazonaws.com/specialities/original/662ba6d8-9458-489e-bb3a-5ee98183ae6d.png",
       "videoUrl": "",
       "banner": false
+    },
+    {
+      "id": "454",
+      "title": "Node.js for Beginners",
+      "category": "Backend",
+      "imageUrl": "https://blog.facialix.com/wp-content/uploads/2021/03/curso-backend-facialix.jpg",
+      "videoUrl": "",
+      "description": "12 Start your journey into backend development with Node.js."
     },
     {
       "id": "5",
       "title": "Descubre el poder de Python: El lenguaje de programación que revoluciona la industria",
       "category": "Backend",
       "description": "Sabemos que hay diversos lenguajes de programación para que empecemos a aprender a programar. En este video vamos a ver cuáles son las ventajas de aprender Python tanto para Programación como para Data Science.",
-      "imageUrl": "https://i.ytimg.com/an_webp/BxcMMgmLKTU/mqdefault_6s.webp?du=3000&sqp=CO-4x7MG&rs=AOn4CLCtD8K1DdI4RS2ic1fdbC4ZFmnBZw",
+      "imageUrl": "https://codigofacilito.com/system/courses/thumbnails/000/000/340/original/python-thumb.jpg?1635347671",
       "videoUrl": "https://youtu.be/BxcMMgmLKTU",
       "videoIframeUrl": "https://www.youtube.com/embed/BxcMMgmLKTU",
       "banner": true
@@ -59,7 +67,7 @@
       "title": "Mastering React.js",
       "category": "Frontend",
       "description": "A masterclass in building dynamic user interfaces with React.js.",
-      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNUIGuwBF-f22-TcGi0W10NwghLuJRBggbwA&s",
+      "imageUrl": "https://i.ytimg.com/vi/rLoWMU4L_qE/maxresdefault.jpg",
       "videoUrl": "",
       "banner": false
     },
@@ -67,26 +75,9 @@
       "id": "8",
       "title": "Deploying Applications with Docker",
       "category": "Backend",
-      "description": "Learn how to containerize and deploy applications using Docker.",
-      "imageUrl": "",
+      "imageUrl": "https://cdn.openwebinars.net/media/facebook-ads-docker-desarrolladores.png",
       "videoUrl": "",
-      "banner": false
-    },
-    {
-      "id": "fa3fffdf45",
-      "title": "Deploying Applications with Docker",
-      "category": "Fullstack",
-      "imageUrl": "https://i.ytimg.com/an_webp/o8x_n4Px1N0/mqdefault_6s.webp?du=3000&sqp=CJ23x7MG&rs=AOn4CLBZ9oC85J9un7I0M6Urmf4tp6x9rg",
-      "videoUrl": "",
-      "description": "De nuez se agregó una descripción"
-    },
-    {
-      "id": "b14d",
-      "title": "¿Qué es React?",
-      "category": "Frontend",
-      "imageUrl": "https://i.ytimg.com/an_webp/9xlea2yDFaY/mqdefault_6s.webp?du=3000&sqp=CPChx7MG&rs=AOn4CLD8gFmHyc2b88TQrOC27Ei6MuDAuw",
-      "videoUrl": "https://youtu.be/MnBNPA45NW8",
-      "description": "En el Alura.tips de hoy platicaremos con Harland Lohora, instructor Front End en la plataforma de Alura Latam, sobre la librería JS de React. "
+      "description": "1.1 Learn how to containerize and deploy applications using Docker."
     }
   ]
 }

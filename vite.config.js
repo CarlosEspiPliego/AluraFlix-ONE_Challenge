@@ -7,6 +7,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@api': '/src/api',
+      '@data': '/src/data',
       '@hooks': '/src/hooks',
       '@images': '/src/assets/images',
       '@store': '/src/store',

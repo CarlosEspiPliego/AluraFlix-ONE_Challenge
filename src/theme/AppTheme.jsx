@@ -7,7 +7,7 @@ export const AppTheme = ({ children }) => {
 
     return (
         <NextUIProvider navigate={navigate}>
-            <main className={`dark text-foreground min-h-screen bg-background`}>
+            <main className={`dark text-foreground min-h-screen`}>
                 {children}
             </main>
         </NextUIProvider>

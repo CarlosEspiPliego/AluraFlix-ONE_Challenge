@@ -1,7 +1,9 @@
-import React from 'react'
+import { HomeLayout, AddVideoFormView } from '@videoGallery'
 
 export const AddNewVideoPage = () => {
   return (
-    <div>AddNewVideoPage</div>
+    <HomeLayout>
+      <AddVideoFormView />
+    </HomeLayout>
   )
 }
