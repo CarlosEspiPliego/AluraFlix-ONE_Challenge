@@ -1,9 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
+import db from '@data/db.json';
 
 const initialState = {
     isSaving: false,
-    videos: [],
-    videosBanner: [],
+    videos: db.videos,
+    videosBanner: db.videos.filter(video => video.banner === true),
     selectedVideo: null,
     error: null
 };
