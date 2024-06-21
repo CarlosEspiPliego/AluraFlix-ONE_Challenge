@@ -6,11 +6,6 @@ import { startSetVideos, startSetVideosBanner } from '@store'
 export const HomePage = () => {
     const dispatch = useDispatch()
 
-    useEffect(() => {
-        dispatch(startSetVideos())
-        dispatch(startSetVideosBanner())
-    }, [dispatch])
-
     return (
         <HomeLayout>
             <BannerView />
