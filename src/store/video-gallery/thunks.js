@@ -3,16 +3,26 @@ import { fetchVideosApi, addVideoApi, updateVideoApi, deleteVideoApi } from "@ap
 
 export const startSetVideos = () => {
     return async (dispatch) => {
-        const videos = await fetchVideosApi();
-        dispatch(setVideos(videos));
+        try {
+            const videos = await fetchVideosApi();
+            dispatch(setVideos(videos));
+        } catch (error) {
+            console.error("Error al obtener los videos", error);
+            dispatch(setVideos([]));
+        }
     }
 }
 
 export const startSetVideosBanner = () => {
     return async (dispatch) => {
-        const videos = await fetchVideosApi();
-        const videosBanner = videos.filter(video => video.banner === true);
-        dispatch(setVideosBanner(videosBanner));
+        try {
+            const videos = await fetchVideosApi();
+            const videosBanner = videos.filter(video => video.banner === true);
+            dispatch(setVideosBanner(videosBanner));
+        } catch (error) {
+            console.error("Error al obtener los videos banner", error);
+            dispatch(setVideosBanner([]));
+        }
     }
 }
 
