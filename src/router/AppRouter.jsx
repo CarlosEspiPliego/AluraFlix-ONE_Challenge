@@ -6,6 +6,8 @@ export const AppRouter = () => {
         <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/addVideo" element={<AddNewVideoPage />} />
+
+            <Route path="*" element={<h1>Not Found</h1>} />
         </Routes>
     )
 }
