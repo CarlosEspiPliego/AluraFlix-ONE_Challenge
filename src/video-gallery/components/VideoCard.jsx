@@ -93,5 +93,5 @@ export const VideoCard = ({ onOpen, video, setSelectedVideo }) => {
 VideoCard.propTypes = {
   onOpen: PropTypes.func.isRequired,
   video: PropTypes.object.isRequired,
-  // setSelectedVideo: PropTypes.func.isRequired
+  setSelectedVideo: PropTypes.func.isRequired
 }
