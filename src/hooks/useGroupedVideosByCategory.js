@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 
-export const useGroupedVideosByCategory = (videos) => {
+export const useGroupedVideosByCategory = (videos = []) => {
+
     return useMemo(() => {
         return videos.reduce((acc, video) => {
             const category = video.category;

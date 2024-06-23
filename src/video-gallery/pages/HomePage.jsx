@@ -4,8 +4,6 @@ import { useDispatch } from 'react-redux'
 import { startSetVideos, startSetVideosBanner } from '@store'
 
 export const HomePage = () => {
-    const dispatch = useDispatch()
-
     return (
         <HomeLayout>
             <BannerView />
