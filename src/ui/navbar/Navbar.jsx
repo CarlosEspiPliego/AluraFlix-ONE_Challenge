@@ -18,10 +18,10 @@ export const Navbar = () => {
             </NavbarBrand>
             <NavbarContent justify="end" className="hidden md:flex">
                 <NavbarItem className="">
-                    <Link href="/AluraFlix-ONE_Challenge" className="uppercase">Home</Link>
+                    <Link href="/" className="uppercase">Home</Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Button as={Link} color="primary" href="AluraFlix-ONE_Challenge/addVideo" variant="flat" className="uppercase">
+                    <Button as={Link} color="primary" href="AluraFlix-ONE_Challenge/addVideo/" variant="flat" className="uppercase">
                         Nuevo Video
                     </Button>
                 </NavbarItem>

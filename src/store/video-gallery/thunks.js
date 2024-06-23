@@ -1,40 +1,65 @@
 import { setVideos, setVideosBanner, isSavingVideo, addNewVideo, updateVideo, deleteVideoById } from "@store/video-gallery";
 import { fetchVideosApi, addVideoApi, updateVideoApi, deleteVideoApi } from "@api/videosApi";
+import db from "@data/db.json";
 
 export const startSetVideos = (showAlert) => {
     return async (dispatch) => {
         try {
             const videos = await fetchVideosApi();
-            dispatch(setVideos(videos));
+            if (videos) {
+                dispatch(setVideos(videos));
+            } else {
+                dispatch(setVideos([]));
+                showAlert({
+                    title: 'Servicio no disponible',
+                    icon: "warning",
+                    text: 'Las APIs no están disponibles en este momento. Se utilizarán datos locales para continuar con la operación. Por favor, ten en cuenta que la información puede no estar completamente actualizada y que los cambios realizados después de esto pueden no ser guardados.',
+                    confirmButtonText: 'Aceptar',
+                    callback: () => { }
+                });
+                dispatch(setVideos(db.videos));
+            }
         } catch (error) {
-            console.error("Error al obtener los videos", error);
             dispatch(setVideos([]));
-            showAlert({
-                title: 'Operación fallida',
-                icon: "error",
-                text: 'Error al obtener los videos, intente nuevamente',
-                confirmButtonText: 'Aceptar',
-                callback: () => { }
-            })
+            // showAlert({
+            //     title: 'Servicio no disponible',
+            //     icon: "warning",
+            //     text: 'Las APIs no están disponibles en este momento. Se utilizarán datos locales para continuar con la operación. Por favor, ten en cuenta que la información puede no estar completamente actualizada y que los cambios realizados después de esto pueden no ser guardados.',
+            //     confirmButtonText: 'Aceptar',
+            //     callback: () => { }
+            // });
         }
     }
 }
 
 export const startSetVideosBanner = (showAlert) => {
     return async (dispatch) => {
+        console.log(db)
         try {
             const videos = await fetchVideosApi();
-            const videosBanner = videos.filter(video => video.banner === true);
-            dispatch(setVideosBanner(videosBanner));
+            if (videos) {
+                const videosBanner = videos.filter(video => video.banner === true);
+                dispatch(setVideosBanner(videosBanner));
+            } else {
+                dispatch(setVideosBanner([]));
+                showAlert({
+                    title: 'Servicio no disponible',
+                    icon: "warning",
+                    text: 'Las APIs no están disponibles en este momento. Se utilizarán datos locales para continuar con la operación. Por favor, ten en cuenta que la información puede no estar completamente actualizada y que los cambios realizados después de esto pueden no ser guardados.',
+                    confirmButtonText: 'Aceptar',
+                    callback: () => { }
+                });
+                dispatch(setVideosBanner(db.videos.filter(video => video.banner === true)));
+            }
         } catch (error) {
             console.error("Error al obtener los videos banner", error);
-            showAlert({
-                title: 'Operación fallida',
-                icon: "error",
-                text: 'Error al obtener los videos banner, intente nuevamente',
-                confirmButtonText: 'Aceptar',
-                callback: () => { }
-            })
+            // showAlert({
+            //     title: 'Servicio no disponible',
+            //     icon: "warning",
+            //     text: 'Las APIs no están disponibles en este momento. Se utilizarán datos locales para continuar con la operación. Por favor, ten en cuenta que la información puede no estar completamente actualizada y que los cambios realizados después de esto pueden no ser guardados.',
+            //     confirmButtonText: 'Aceptar',
+            //     callback: () => { }
+            // });
             dispatch(setVideosBanner([]));
         }
     }
@@ -55,13 +80,20 @@ export const startAddNewVideo = (video, showAlert, navigate) => {
                 showAlert({
                     title: 'Operación exitosa',
                     icon: "success",
-                    text: 'Video actualizado correctamente',
+                    text: 'Video agregado correctamente',
                     confirmButtonText: 'Aceptar',
                     callback: () => { navigate('/') }
                 })
             } else {
-                console.log("Error al agregar el video")
-                return false;
+                dispatch(addNewVideo(video));
+                showAlert({
+                    title: 'Operación exitosa',
+                    icon: "warning",
+                    text: 'El video se ha actualizado correctamente, pero no se ha podido guardar en la base de datos.',
+                    confirmButtonText: 'Aceptar',
+                    callback: () => { navigate('/') }
+                })
+                
             }
         } catch (error) {
             console.log("Error al agregar el video", error)
@@ -97,15 +129,29 @@ export const startUpdateVideo = (video, onClose) => {
     }
 }
 
-export const startDeleteVideoById = (id) => {
+export const startDeleteVideoById = (id, showAlert) => {
     return async (dispatch) => {
         dispatch(isSavingVideo());
         try {
             const response = await deleteVideoApi(id);
             if (response) {
                 dispatch(deleteVideoById(id));
+                showAlert({
+                    title: 'Operación exitosa',
+                    icon: "success",
+                    text: 'Video eliminado correctamente',
+                    confirmButtonText: 'Aceptar',
+                    callback: () => { }
+                })
             } else {
-                throw new Error('Error al eliminar el video');
+                dispatch(await deleteVideoById(id));
+                await showAlert({
+                    title: 'Operación exitosa',
+                    icon: "warning",
+                    text: 'El video se ha eliminado correctamente, pero no se ha podido eliminar de la base de datos.',
+                    confirmButtonText: 'Aceptar',
+                    callback: () => { }
+                })
             }
         } catch (error) {
             console.error("Error al eliminar el video", error);

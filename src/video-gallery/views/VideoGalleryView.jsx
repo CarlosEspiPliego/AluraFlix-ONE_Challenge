@@ -14,7 +14,9 @@ export const VideoGalleryView = () => {
 
     return (
         <section className="flex flex-col gap-8 pb-14 p-4 md:p-6">
-            {Object.keys(groupedVideos).map(category => (
+
+            {
+                groupedVideos && Object.keys(groupedVideos).map(category => (
                 <section key={category} className="flex flex-col gap-4 w-full">
                     <div className={`${getCategoryColor(category)} lg:chip__category self-center lg:self-start flex justify-center items-center rounded-2xl h-12 text-[1.5rem] min-w-[17rem] md:min-w-[20rem] lg:min-w-[27rem] max-w-[27rem] lg:chip__category`}>
                         <h2 className="">{category}</h2>

@@ -21,8 +21,8 @@ export const VideoCard = ({ onOpen, video, setSelectedVideo }) => {
     onOpen()
   }
 
-  const onDeleteVideo = (video) => {
-    showAlert({
+  const onDeleteVideo = async (video) => {
+    await showAlert({
       title: 'Eliminar video',
       text: `¿Estas seguro de eliminar el video?`,
       icon: 'warning',
@@ -30,7 +30,7 @@ export const VideoCard = ({ onOpen, video, setSelectedVideo }) => {
       confirmButtonText: 'Eliminar',
       cancelButtonText: 'Cancelar',
       callback: async () => {
-        await dispatch(startDeleteVideoById(video.id))
+        await dispatch(startDeleteVideoById(video.id, showAlert))
       }
     })
   }
