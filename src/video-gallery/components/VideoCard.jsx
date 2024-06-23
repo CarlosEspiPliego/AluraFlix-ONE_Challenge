@@ -42,7 +42,7 @@ export const VideoCard = ({ onOpen, video, setSelectedVideo }) => {
         variant="flat"
         size="sm"
         disabled={!videoUrl}
-        className="absolute top-2 right-2 z-50"
+        className="absolute top-2 right-2 z-[1]"
         onPress={() => onOpenVideo()}
       >
         Ver video

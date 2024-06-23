@@ -34,7 +34,7 @@ export const BottomBar = () => {
     }
 
     return (
-        <div className="md:hidden w-full flex fixed bottom-2 items-center px-4">
+        <div className="md:hidden w-full flex fixed bottom-2 items-center px-4 z-10">
             <div className='flex justify-around py-2 px-4 bg-[#040910] border-1 rounded-xl border-primary-300 z-10 w-full '>
                 <Button
                     color="primary"

@@ -1,7 +1,7 @@
 import { setVideos, setVideosBanner, isSavingVideo, addNewVideo, updateVideo, deleteVideoById } from "@store/video-gallery";
 import { fetchVideosApi, addVideoApi, updateVideoApi, deleteVideoApi } from "@api/videosApi";
 
-export const startSetVideos = () => {
+export const startSetVideos = (showAlert) => {
     return async (dispatch) => {
         try {
             const videos = await fetchVideosApi();
@@ -9,11 +9,18 @@ export const startSetVideos = () => {
         } catch (error) {
             console.error("Error al obtener los videos", error);
             dispatch(setVideos([]));
+            showAlert({
+                title: 'Operación fallida',
+                icon: "error",
+                text: 'Error al obtener los videos, intente nuevamente',
+                confirmButtonText: 'Aceptar',
+                callback: () => { }
+            })
         }
     }
 }
 
-export const startSetVideosBanner = () => {
+export const startSetVideosBanner = (showAlert) => {
     return async (dispatch) => {
         try {
             const videos = await fetchVideosApi();
@@ -21,6 +28,13 @@ export const startSetVideosBanner = () => {
             dispatch(setVideosBanner(videosBanner));
         } catch (error) {
             console.error("Error al obtener los videos banner", error);
+            showAlert({
+                title: 'Operación fallida',
+                icon: "error",
+                text: 'Error al obtener los videos banner, intente nuevamente',
+                confirmButtonText: 'Aceptar',
+                callback: () => { }
+            })
             dispatch(setVideosBanner([]));
         }
     }
