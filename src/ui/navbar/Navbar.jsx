@@ -5,7 +5,7 @@ export const Navbar = () => {
     return (
         <NavbarUI maxWidth="full" isBlurred className="border-b-2 border-primary shadow-md shadow-primary-500">
             <NavbarBrand className="justify-center md:justify-start">
-                <Link href="/">
+                <Link href="/AluraFlix-ONE_Challenge">
                     <Image
                         src={Logo}
                         alt="Logo"
@@ -18,10 +18,10 @@ export const Navbar = () => {
             </NavbarBrand>
             <NavbarContent justify="end" className="hidden md:flex">
                 <NavbarItem className="">
-                    <Link href="/" className="uppercase">Home</Link>
+                    <Link href="/AluraFlix-ONE_Challenge" className="uppercase">Home</Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Button as={Link} color="primary" href="/addVideo" variant="flat" className="uppercase">
+                    <Button as={Link} color="primary" href="AluraFlix-ONE_Challenge/addVideo" variant="flat" className="uppercase">
                         Nuevo Video
                     </Button>
                 </NavbarItem>

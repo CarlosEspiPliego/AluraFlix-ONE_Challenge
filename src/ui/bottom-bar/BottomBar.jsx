@@ -43,7 +43,7 @@ export const BottomBar = () => {
                     onPress={handleActiveHome}
                     startContent={<IconHome size={20} stroke={1.5} />}
                     as={Link}
-                    href='/'
+                    href='/AluraFlix-ONE_Challenge'
                 >
                     { activeHome && "HOME"}
                 </Button>
@@ -54,7 +54,7 @@ export const BottomBar = () => {
                     onPress={handleActiveNewVideo}
                     startContent={<IconPlus size={20} stroke={1.5} />}
                     as={Link}
-                    href='/addVideo'
+                    href='AluraFlix-ONE_Challenge/addVideo'
                 >
                     { activeNewVideo && "NUEVO VIDEO"}
                 </Button>

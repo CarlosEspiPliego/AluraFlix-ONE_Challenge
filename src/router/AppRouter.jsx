@@ -4,8 +4,8 @@ import { HomePage, AddNewVideoPage } from '@videoGallery'
 export const AppRouter = () => {
     return (
         <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/addVideo" element={<AddNewVideoPage />} />
+            <Route path="/AluraFlix-ONE_Challenge/" element={<HomePage />} />
+            <Route path="/AluraFlix-ONE_Challenge/addVideo" element={<AddNewVideoPage />} />
             <Route path="/*" element={<HomePage />} />
         </Routes>
     )
