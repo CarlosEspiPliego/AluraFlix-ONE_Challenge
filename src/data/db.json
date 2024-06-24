@@ -78,14 +78,6 @@
       "imageUrl": "https://cdn.openwebinars.net/media/facebook-ads-docker-desarrolladores.png",
       "videoUrl": "",
       "description": "1.1 Learn how to containerize and deploy applications using Docker."
-    },
-    {
-      "id": "97ca",
-      "title": "Titulito",
-      "category": "Frontend",
-      "imageUrl": "https://cdn.openwebinars.net/media/facebook-ads-docker-desarrolladores.png",
-      "videoUrl": "https://cdn.openwebinars.net/media/facebook-ads-docker-desarrolladores.png",
-      "description": "Pruebita descr"
     }
   ]
 }

@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 import { Modal, ModalContent, ModalHeader, ModalBody, Button, Select, SelectItem, Input, Textarea } from "@nextui-org/react";
-import { useFormikForm, useDataAddVideoForm } from '@hooks'
+import { useFormikForm, useDataAddVideoForm, useAlert } from '@hooks'
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { startUpdateVideo } from '@store';
 
 export const EditVideoModal = ({ isOpen, onOpenChange, selectedVideo }) => {
+    const showAlert = useAlert()
     const { initialValues, validationSchemaEditForm, categories } = useDataAddVideoForm();
     const dispatch = useDispatch();
 
@@ -23,8 +24,11 @@ export const EditVideoModal = ({ isOpen, onOpenChange, selectedVideo }) => {
     }, [selectedVideo]);
 
     const onSubmit = async (values) => {
-        console.log(values)
-        await dispatch(startUpdateVideo(values, onClose));
+        try {
+            await dispatch(startUpdateVideo(values, onClose, showAlert));
+        } catch (error) {
+            console.error(error);
+        }
     }
 
     const onClose = () => {

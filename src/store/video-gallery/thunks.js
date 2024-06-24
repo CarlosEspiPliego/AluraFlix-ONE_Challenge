@@ -110,7 +110,7 @@ export const startAddNewVideo = (video, showAlert, navigate) => {
     }
 }
 
-export const startUpdateVideo = (video, onClose) => {
+export const startUpdateVideo = (video, onClose, showAlert) => {
     return async (dispatch) => {
         dispatch(isSavingVideo());
         try {
@@ -119,7 +119,15 @@ export const startUpdateVideo = (video, onClose) => {
                 dispatch(updateVideo(response));
                 onClose();
             } else {
-                throw new Error('Error al actualizar el video');
+                dispatch(updateVideo(video));
+                onClose();
+                await showAlert({
+                    title: 'Operación exitosa',
+                    icon: "warning",
+                    text: 'El video se ha actualizado correctamente, pero no se ha podido actualizar en la base de datos.',
+                    confirmButtonText: 'Aceptar',
+                    callback: () => { }
+                })
             }
         } catch (error) {
             console.error("Error al actualizar el video", error);
