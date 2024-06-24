@@ -6,8 +6,7 @@ AluraFlix es una plataforma diseñada para gestionar vídeos, con funcionalidade
 
 - [Visión general](#visión-general)
   - [Descripción](#descripción)
-  - [Capturas de pantalla](#capturas-de-p
-  ntalla)
+  - [Capturas de pantalla](#capturas-de-pantalla)
   - [Enlaces](#enlaces)
 - [Mi proceso](#mi-proceso)
   - [Construido con](#construido-con)
